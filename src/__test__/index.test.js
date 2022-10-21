@@ -5,8 +5,8 @@ test.each([
   ['30HP', { name: 'Маг', health: 30 }, 'wounded'],
   ['5HP', { name: 'Маг', health: 5 }, 'critical'],
 ])(
-  ('should return life status with %hl for %h'),
-  (healthLevel, npc, lifeStatus) => {
+  ('should return life status with %s for %s'),
+  (_, npc, lifeStatus) => {
     const result = getLifeStatus(npc);
     expect(result).toBe(lifeStatus);
   },
